@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Owner extends Model
 {
+    protected $guarded = [];
+
     use HasFactory;
+
+    public function coworkings()
+    {
+        return $this->hasMany(Coworking::class, 'coworking_id');
+    }
 }

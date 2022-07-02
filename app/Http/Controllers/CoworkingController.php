@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PlaceController extends Controller
+class CoworkingController extends Controller
 {
     /**
      * Display a listing of the resource.

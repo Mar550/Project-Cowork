@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Review extends Model
+class Coworking extends Model
 {
     protected $guarded = [];
 
     use HasFactory;
 
-    public function profiles()
+    public function owners()
     {
-        return $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(Owner::class, 'owner_id');
     }
 }
