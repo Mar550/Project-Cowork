@@ -1,4 +1,6 @@
 import React from "react";
+import './Header.css';
+
 
 const Header = () => {
     return (    
@@ -6,7 +8,7 @@ const Header = () => {
       <header id="header" className="fixed-top header-inner-pages">
       <div className="container d-flex align-items-center justify-content-between">
   
-        <h1 className="logo"><a href="index.html">Hidayah</a></h1>
+        <h1 className="logo"><a href="index.html">Cowork</a></h1>
   
         <nav id="navbar" className="navbar">
           <ul>
@@ -33,6 +35,12 @@ const Header = () => {
               </ul>
             </li>
             <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
+            <li  className="nav-link scrollto">
+                    <input className="login" type="button" value="Login"/>
+                </li>
+            <li className="nav-link scrollto">
+                    <input className="signup" type="button" value="Sign Up"/>
+           </li>
           </ul>
           <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>

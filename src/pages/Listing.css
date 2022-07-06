@@ -1,0 +1,20 @@
+h3{
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+span{
+    color:#428bca;
+    box-sizing: border-box;
+    font-weight: 900;
+}
+
+.testimonial-item{
+    display:flex;
+    flex-direction: column;
+}
+
+.columns{
+    display:flex;
+    flex-direction: row;
+}

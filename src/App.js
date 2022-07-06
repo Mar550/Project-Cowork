@@ -13,7 +13,7 @@ function App() {
   return (
     <div id="root">
       <Header/>
-      <Inner/>
+      <Listing/>
       <Footer/>
     </div>
   );
