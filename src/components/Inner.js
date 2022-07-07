@@ -21,6 +21,7 @@ const Inner = () => {
 
                 </div>
                 </section>
+                
 
                 <section className="inner-page">
                     <div className="container-fluid">

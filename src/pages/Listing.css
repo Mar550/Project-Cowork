@@ -14,7 +14,47 @@ span{
     flex-direction: column;
 }
 
+.newsection{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
 .columns{
     display:flex;
     flex-direction: row;
 }
+
+.map{
+    margin-left: 2rem;
+}
+
+.row{
+    --bs-gutter-x: 1.5rem;
+}
+
+.imgmap{
+    width: 500px;
+}
+
+.box{
+    box-sizing: content-box;
+    padding: 40px;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+    position: relative;
+    background: #fff;
+}
+
+.cardsgrid{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.boxcontainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    gap: 2rem ;
+    width: 50%;
+}
+
