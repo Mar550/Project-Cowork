@@ -7,13 +7,15 @@ import Register from './pages/Register';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Inner from './components/Inner';
+import Contact from './pages/Contact';
+
 
 function App() {
 
   return (
     <div id="root">
       <Header/>
-      <Listing/>
+      <Contact/>
       <Footer/>
     </div>
   );
