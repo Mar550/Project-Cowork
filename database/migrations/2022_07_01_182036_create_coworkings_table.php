@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('name');  
             $table->string('type');    
             $table->longText('adress'); 
-            $table->string('city');      
+            $table->string('city');  
+            $table->string('postalcode');          
             $table->bigInteger('phone');      
             $table->string('email')->unique(); 
             $table->bigInteger('price');           

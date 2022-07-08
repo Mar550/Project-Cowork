@@ -42,9 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function coworkings()
+    public function reviews()
     {
-        return $this->hasOne(Profile::class, 'profile_id');
+        return $this->hasMany(Review::class, 'review_id');
     }
     
 }

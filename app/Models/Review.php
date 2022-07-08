@@ -11,8 +11,8 @@ class Review extends Model
 
     use HasFactory;
 
-    public function profiles()
+    public function users()
     {
-        return $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
