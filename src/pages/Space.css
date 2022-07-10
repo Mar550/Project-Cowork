@@ -1,0 +1,58 @@
+body{
+    background-color: white;
+}
+.columns{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.columna{
+    width: 60%;
+}
+
+.columnb{
+    width: 40%;
+}
+
+.city{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon{
+    font-size: 2rem;
+    color: black;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.option{
+    width: 30%;
+}
+
+#carousel-cmp{
+    margin-top: 2rem;
+}
+
+.columnb{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#features{
+    border:2px solid grey;
+}
+
+#types{
+    border: 2px solid grey;
+}
+
+h4{
+    font-weight: bold;
+}

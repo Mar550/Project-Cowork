@@ -1,13 +1,17 @@
-import React from "react";
-import './Login.css';
+import React,{useState} from "react";
+import './PopupLogin.css';
 import {FaGooglePlus} from 'react-icons/fa';
 import {AiFillTwitterCircle} from 'react-icons/ai';
 import {BsGithub} from 'react-icons/bs';
 import {FaFacebook} from 'react-icons/fa';
+import {AiFillCloseSquare} from 'react-icons/ai';
 
 
-const Login = () => {
-    return (
+const PopupLogin = (props) => {
+
+    const [trigger, setTrigger] = useState(false);
+
+    return (props.trigger) ? (
         <>
         <section className="inner-page">
                     <div className="container-fluid">
@@ -16,6 +20,7 @@ const Login = () => {
                 <div class="shape"></div>
             </div>
             <form className="loginform">
+                <AiFillCloseSquare className="closeicon" onClick={() => props.setTrigger(false)}/>
                 <h3>Login </h3>
 
                 <label for="username">Username</label>
@@ -33,9 +38,12 @@ const Login = () => {
                 </div>
             </form>
             </div>
-        </section>  
+
+        </section> 
         </>
-    )
+    ) : "";
 }
 
-export default Login;
+
+
+export default PopupLogin;

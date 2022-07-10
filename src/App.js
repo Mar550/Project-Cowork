@@ -10,7 +10,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Inner from './components/Inner';
 import Contact from './pages/Contact';
-import Place from './pages/Place'
+import Space from './pages/Space'
+import PopupLogin from './components/PopupLogin';
+
 
 function App() {
 
@@ -33,13 +35,13 @@ function App() {
         <Route path ='/contact' element={<Contact/>}>
         </Route>
 
-        <Route path ='/login' element={<Login/>}>
+        <Route path ='/login' element={<PopupLogin/>}>
         </Route>
 
         <Route path ='/register' element={<Register/>}>
         </Route>
 
-        <Route path ='/place' element={<Place/>}>
+        <Route path ='/space' element={<Space/>}>
         </Route>
       </Routes>
       <Footer/>

@@ -1,8 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import './Header.css';
+import './PopupLogin.css';
+import PopupLogin from "./PopupLogin";
 
 
 const Header = () => {
+
+  const [buttonPopup, setButtonPopup] = useState(false);
+
     return (    
       <>
       <header id="header" className="fixed-top header-inner-pages">
@@ -36,7 +41,7 @@ const Header = () => {
             </li>
             <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
             <li  className="nav-link scrollto">
-                    <input className="login" type="button" value="Login"/>
+                    <input className="login" type="button" value="Login" onClick={() => setButtonPopup(true)}/>
                 </li>
             <li className="nav-link scrollto">
                     <input className="signup" type="button" value="Sign Up"/>
@@ -47,7 +52,9 @@ const Header = () => {
   
       </div>
     </header>
-  
+    <div> 
+      <PopupLogin trigger={buttonPopup} setTrigger ={setButtonPopup}/>              
+    </div>
       </>
     )
 }
