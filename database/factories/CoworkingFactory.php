@@ -27,7 +27,6 @@ class CoworkingFactory extends Factory
             'price' => $this->faker->numberBetween(0,100),
             'availability' => $this->faker->dateTime(),
             'owner_id' => $this->faker->unique(true)->numberBetween(1,20),
-
         ];
     }
 }

@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Models\User;
+use App\Models\Owner;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -17,20 +23,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('admin')->middleware('admin')->group(function(){
+    Route::get('/home',[App\Http\Controllers\AdminController::class,'index'])->name('admin.index');
+});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('owner')->middleware('owner')->group(function(){
+    Route::get('/home',[App\Http\Controllers\OwnerController::class,'index'])->name('owner.index');
+});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('user')->middleware('auth')->group(function(){
+    Route::get('/home',[App\Http\Controllers\UserController::class,'index'])->name('user.index');
+});
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

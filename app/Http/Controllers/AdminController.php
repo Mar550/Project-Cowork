@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+
 
 class AdminController extends Controller
 {
@@ -11,9 +13,15 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct() 
+    {
+        $this->middleware('admin');
+    }
+
     public function index()
     {
-        //
+        return view('admin.index') ;
     }
 
     /**
